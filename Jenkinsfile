@@ -27,6 +27,14 @@ pipeline {
                 }
             }
         }
+
+        stage('Branch') {
+            agent any
+            steps {
+                echo 'multitest'
+            }
+        }
+        
         stage('Deliver') {
             agent any
             environment {
